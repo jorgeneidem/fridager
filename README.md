@@ -1,7 +1,7 @@
 
-#Fridager 
+# Fridager 
 
-☀ ☘ 🌴 🏖️ 📅
+## ☀ ☘ 🌴 🏖️ 📅
 
 A website without a front-end framework but Webpack to support writing modern JavaScript (ES6+), including ES Modules and Sass.
 
