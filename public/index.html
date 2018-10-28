@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fridager</title>
-<link rel="stylesheet" href="./assets/styles/main.css">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/components/dropdown.css" integrity="sha256-MjHcMdfJRZUDmUENRC1dJALkoetJGDPmjHvRIduukgE=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 <body>
   <div class="wrapper bg--gradient">
@@ -14,9 +14,36 @@
       <h1 id="header"><a href="#">Fridage<span>r<span>.no<span></span></a></h1>
     </header>
     <main>
-      <h2>This site rocks 🤘🤘</h2>
+      <h2>Fridager 2019 🤘🤘</h2>
+
+      <div class="ui selection dropdown">
+        <input type="hidden" name="inneklemt">
+        <i class="dropdown icon"></i>
+        <div class="default text">Vis 2 inneklemte dager</div>
+        <div class="menu">
+          <div class="item" data-value="2">Vis 2 inneklemte dager</div>
+          <div class="item" data-value="1">Vis 1 inneklemte dager</div>
+          <div class="item" data-value="0">Ikke vis inneklemte dager</div>
+        </div>
+      </div>
+
+      <div class="ui selection dropdown">
+        <input type="hidden" name="skolefri">
+        <i class="dropdown icon"></i>
+        <div class="default text">Vis skolefri for hele landet</div>
+        <div class="menu">
+          <div class="item" data-value="4">Vis skolefri for hele landet</div>
+          <div class="item" data-value="3">Vis skolefri for Møre og Romsdal</div>
+          <div class="item" data-value="2">Vis skolefri for Østfold</div>
+          <div class="item" data-value="1">Vis skolefri for Vestfold</div>
+          <div class="item" data-value="0">Ikke vis skolefri</div>
+        </div>
+      </div>
+
+      
+
+     
       <div class="bacon">
-        <img src="./assets/images/oval.svg" alt="loading">
       </div>
     </main>
     <footer>
@@ -24,5 +51,13 @@
     </footer>
   </div>
   <script src="./assets/scripts/bundle.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+  <script>
+    $( document ).ready(function() {
+      $('.ui.dropdown').dropdown();
+    });      
+  </script>
+
 </body>
 </html>
