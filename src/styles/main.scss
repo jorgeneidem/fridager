@@ -3,12 +3,20 @@
 @import 'utilities/variables';
 @import 'utilities/typography';
 
+*{
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -moz-font-feature-settings: "liga" on;
+ }
+
 body {
   background-color: $bg-color--primary;
   color: $grey-lightest;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
     "Droid Sans", "Helvetica Neue", sans-serif;
+  font-size: 16px;
 }
 
 .bg--gradient {
@@ -26,9 +34,9 @@ body {
     grid-column: 1 / -1;
     min-height: 80px; 
     margin-bottom: 20px;
-    padding: 0 18px 0 18px;
+    padding: 0 28px 0 18px;
     display: flex;
-    justify-content: left;
+    justify-content: space-between;
     align-items: center; 
     color: #fff;
     text-align: center;
@@ -50,11 +58,102 @@ body {
         }
       }
     }
+    h2 .year {
+      margin: 0 0 0 auto;
+    }
+  }
+
+  .ui.selection.dropdown {
+    margin-bottom: .5rem;
+  }
+
+  .ui.dropdown>.text {
+    padding: .42rem;
+    color: $color-primary;
+  }
+
+  .ui.selection.dropdown .menu.transition.visible>.item {
+    padding-top: 1.2rem!important;
+    padding-bottom: 1.2rem!important;
+    &:last-child {
+      padding-bottom: 1.5rem!important;
+    }
+  }
+
+  .ui.selection.dropdown .menu {
+    max-height: 18rem;
+  }
+
+  .ui.dropdown .menu .active.item {
+    color: $color-primary;
+  }
+  
+  .ui.dropdown>.dropdown.icon {
+    font-size: 1.2rem;
+    padding: .876rem 1rem;
+  }
+
+  .ui.default.dropdown:not(.button)>.text, 
+  .ui.dropdown:not(.button)>.default.text {
+    color: $color-primary; 
   }
 
   main { 
     grid-column: 2 / -2; 
+    h1 {
+      font-size: 1rem;
+      font-weight: 200;
+      margin-top: 2rem;
+      margin-bottom: 1.2rem;
+      max-width: 77vw;
+    }
   }
+
+  // SS BEM Panel card
+.card {
+  border: $border-grey;
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  color: $black;
+  
+  &__section {
+    padding: 18px 22px;
+    position: relative;
+    min-height: 54px;
+    border-top: $border-grey;
+      &:first-of-type {
+        border-top: none;
+      }
+  }
+  
+  &__btn {
+    &--header {
+      position: absolute;
+      right: 10px;
+      top: 9px; 
+    }
+  }
+  
+  &__text {
+    &--title {
+      color: $black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    &--subtitle {
+      color: $black;
+      font-weight: 700;
+    }
+    &--sandwiched {
+      color: $grey-dark;
+    }
+    &--schoolsout {
+      color: $green-dark;
+    }
+  }
+}
+
 
   footer {
     background: rgba(0,0,0,.036);

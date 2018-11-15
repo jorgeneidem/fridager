@@ -1,50 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Fridager</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" />
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
+
 <body>
   <div class="wrapper bg--gradient">
     <header>
-      <h1 id="header"><a href="#">Fridage<span>r<span>.no<span></span></a></h1>
+      <h1><a href="#">fridage<span>r<span>.no<span></span></a></h1>
+      <h2 class="year">2019</h2>
     </header>
     <main>
-      <h2>Fridager 2019 🤘🤘</h2>
+      <h1 class="">Full oversikt over norske helligdager, røde dager og inneklemte dager i 2019: </h1>
 
-      <div class="ui selection dropdown">
-        <input type="hidden" name="inneklemt">
-        <i class="dropdown icon"></i>
-        <div class="default text">Vis 2 inneklemte dager</div>
-        <div class="menu">
-          <div class="item" data-value="2">Vis 2 inneklemte dager</div>
-          <div class="item" data-value="1">Vis 1 inneklemte dager</div>
-          <div class="item" data-value="0">Ikke vis inneklemte dager</div>
+      <select class="select-filter ui fluid dropdown" name="gender" id="select">
+        <option value="all">Vis opptil 2 inneklemte dager</option>
+        <option value=".inneklemt--dobbel">Vis doble inneklemte dager</option>
+        <option value=".inneklemt--enkel">Vis enkle inneklemte dager</option>
+        <option value=".yo">Skjul inneklemte dager</option>
+      </select>
+
+      <div class="card container">
+        <div class="card__section">
+            1. januar: Første nyttårsdag
         </div>
-      </div>
-
-      <div class="ui selection dropdown">
-        <input type="hidden" name="skolefri">
-        <i class="dropdown icon"></i>
-        <div class="default text">Vis skolefri for hele landet</div>
-        <div class="menu">
-          <div class="item" data-value="4">Vis skolefri for hele landet</div>
-          <div class="item" data-value="3">Vis skolefri for Møre og Romsdal</div>
-          <div class="item" data-value="2">Vis skolefri for Østfold</div>
-          <div class="item" data-value="1">Vis skolefri for Vestfold</div>
-          <div class="item" data-value="0">Ikke vis skolefri</div>
+        <div class="card__section">
+          14. april: Palmesøndag
         </div>
+        <div class="card__section">
+          18. april: Skjærtorsdag
+        </div>
+        <div class="card__section">
+          19. april: Langfredag
+        </div>
+        <div class="card__section">
+          21. april: Første påskedag
+        </div>
+        <div class="card__section">
+          22. april: Andre påskedag
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 29. april: Inneklemt mandag
+          </div>
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 30. april: Inneklemt tirsdag
+          </div>
+        </div>
+        <div class="card__section">
+          1. mai: Arbeidernes dag
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 2. mai: Inneklemt torsdag
+          </div>
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 3. mai: Inneklemt fredag
+          </div>
+        </div>
+        <div class="card__section">
+          17. mai: Grunnlovsdag
+        </div>
+        <div class="card__section">
+          30. mai: Kristi himmelfartsdag
+        </div>
+        <div class="card__section mix inneklemt--enkel">
+          <div class="card__text--sandwiched">
+            🥪 31. mai: Inneklemt fredag
+          </div>
+        </div>
+        <div class="card__section">
+          9. juni: Første pinsedag
+        </div>
+        <div class="card__section">
+          10. juni: Andre pinsedag
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 23. desember: Inneklemt mandag
+          </div>
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 24. mai: Inneklemt tirsdag, julaften
+          </div>
+        </div>
+        <div class="card__section">
+          25. desember: Første juledag
+        </div>
+        <div class="card__section">
+          26. desember: Andre juledag
+        </div>
+        <div class="card__section mix inneklemt--enkel">
+          <div class="card__text--sandwiched">
+            🥪 27. desember: Inneklemt fredag
+          </div>
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 30. desember: Inneklemt mandag
+          </div>
+        </div>
+        <div class="card__section mix inneklemt--dobbel">
+          <div class="card__text--sandwiched">
+            🥪 31. mai: Inneklemt tirsdag
+          </div>
+        </div>
+        
       </div>
 
-      
-
-     
-      <div class="bacon">
-      </div>
     </main>
     <footer>
       <p>Copyright © 2018 <a href="#" target="_blank">Kontakt</a></p>
@@ -54,10 +128,29 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script>
-    $( document ).ready(function() {
-      $('.ui.dropdown').dropdown();
-    });      
+    $(document).ready(function () {
+      $('#select').dropdown();
+    });
+  </script>
+  <script src="./assets/scripts/mixitup.min.js"></script>
+  <script>
+      // In this example, we must bind 'change' event handlers to
+      // our <select> elements, then interact with the mixer via
+      // its .filter() and .sort() API methods.
+      var containerEl = document.querySelector('.container');
+      var selectFilter = document.querySelector('.select-filter');
+      var selectSort = document.querySelector('.select-sort');
+      var mixer = mixitup(containerEl);
+      selectFilter.addEventListener('change', function() {
+          var selector = selectFilter.value;
+          mixer.filter(selector);
+      });
+      selectSort.addEventListener('change', function() {
+          var order = selectSort.value;
+          mixer.sort(order);
+      });
   </script>
 
 </body>
+
 </html>
