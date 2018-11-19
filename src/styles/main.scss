@@ -25,13 +25,11 @@ body {
 }
 
 .wrapper {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: 18px 2fr 20px;
-  grid-template-rows: auto 1fr auto;
+  min-width: 100vw;
+
+
   header {
-    background: rgba(0,0,0,.036);
-    grid-column: 1 / -1;
+    background-color: rgba(0,0,0,.05);
     min-height: 80px; 
     margin-bottom: 20px;
     padding: 0 28px 0 18px;
@@ -39,36 +37,56 @@ body {
     justify-content: space-between;
     align-items: center; 
     color: #fff;
-    text-align: center;
-    h1 {
-      a {
-        text-decoration: none;
-        color: $grey-lightest;
-        &:hover span {
-          opacity: 1;
-        }
+    
+    .header__content {
+      
+      display: flex;
+      width: 95vw;
+      margin: 0 auto;    
+      @media (min-width: 540px) {
+        width: 86vw;
       }
-      font-size: 1.5rem;
-      span {
-        transition: opacity .3s ease-in-out;
-        letter-spacing: -.025rem;
+      @media (min-width: 1024px) {
+        width: 80vw;
+      }
+      @media (min-width: 1280px) {
+        width: 74vw;
+      }
+      
+      
+
+      h1 {
+        a {
+          text-decoration: none;
+          color: $grey-lightest;
+          &:hover span {
+            opacity: 1;
+          }
+        }
+        font-size: 1.5rem;
         span {
-          margin-left: -.15rem;
-          opacity: 0.5;  
+          transition: opacity .3s ease-in-out;
+          letter-spacing: -.025rem;
+          span {
+            margin-left: -.15rem;
+            opacity: 0.5;  
+          }
         }
       }
-    }
-    h2 .year {
-      margin: 0 0 0 auto;
+      .year {
+        margin: 0 0 0 auto;
+      }
     }
   }
 
   .ui.selection.dropdown {
     margin-bottom: .5rem;
+    padding-left: 14px;
+    min-height: 60px;
   }
 
   .ui.dropdown>.text {
-    padding: .42rem;
+    padding: .42rem .12rem .42rem 0;
     color: $color-primary;
   }
 
@@ -99,31 +117,88 @@ body {
   }
 
   main { 
-    grid-column: 2 / -2; 
-    h1 {
+
+  max-width: 95vw;
+  margin: 0 auto;
+  @media (min-width: 540px) {
+    max-width: 86vw;
+  }
+  @media (min-width: 1024px) {
+    max-width: 80vw;
+  }
+  @media (min-width: 1280px) {
+    max-width: 74vw;
+  }
+  
+    .intro__text   {
       font-size: 1rem;
       font-weight: 200;
       margin-top: 2rem;
-      margin-bottom: 1.2rem;
+      margin-bottom: 2rem;
       max-width: 77vw;
+        @media (min-width: 540px) {  
+          max-width: 70%;
+          text-align: center;
+          font-size: 1.8rem;
+          font-weight: 300;
+          margin: .5rem auto 1.8rem auto;
+        }
+    }
+  }
+
+  .main__grid {
+    display: grid;
+  }
+
+  .main__grid__area--fridager {
+    margin: 0 auto;
+    min-width: 100%;
+    @media (min-width: 600px) {
+      min-width: 70%;
     }
   }
 
   // SS BEM Panel card
 .card {
-  border: $border-grey;
-  background: #fff;
   margin-bottom: 20px;
-  border-radius: 4px;
   color: $black;
-  
+
+  &__section__single {
+    border: $border-grey;
+    background: #fff;
+    padding: 18px 14px;
+    position: relative; 
+    border-radius: $card-radius;
+    &--plug {
+      display: grid;
+      grid-gap: 20px;
+      img {
+        width: 100%;
+      }
+      .card__text--title {
+        max-width: 80%;
+      }
+      @media(min-width:600px) {
+        grid-template-columns: 4fr 5fr;
+      }
+    }
+  }
   &__section {
-    padding: 18px 22px;
+    border: $border-grey;
+    background: #fff;
+    padding: 18px 14px;
     position: relative;
-    min-height: 54px;
-    border-top: $border-grey;
+    min-height: 60px;
+    border-top: none;
       &:first-of-type {
-        border-top: none;
+        border-top: $border-grey;
+        border-top-left-radius: $card-radius;
+        border-top-right-radius: $card-radius;
+      }
+      &:not([style*="display: none;"]):last-child
+      {
+        border-bottom-left-radius: $card-radius;
+        border-bottom-right-radius: $card-radius;
       }
   }
   
@@ -136,10 +211,18 @@ body {
   }
   
   &__text {
+    p {
+      margin-bottom:8px;
+    }
     &--title {
       color: $black;
       font-size: 16px;
       font-weight: bold;
+      margin-bottom: 8px;
+      &--big {
+        font-size: 22px;
+        line-height: 26px;
+      }
     }
     &--subtitle {
       color: $black;
@@ -151,9 +234,16 @@ body {
     &--schoolsout {
       color: $green-dark;
     }
+    a {
+      text-decoration: none;
+      font-weight: 400;
+    }
   }
 }
 
+.section__title {
+  margin-bottom: .5rem;
+}
 
   footer {
     background: rgba(0,0,0,.036);

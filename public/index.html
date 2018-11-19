@@ -10,122 +10,171 @@
   <link rel="stylesheet" href="./assets/styles/main.css">
 </head>
 
-<body>
-  <div class="wrapper bg--gradient">
+<body class="bg--gradient">
+  <div class="wrapper">
     <header>
-      <h1><a href="#">fridage<span>r<span>.no<span></span></a></h1>
-      <h2 class="year">2019</h2>
+      <div class="header__content">
+        <h1><a href="#">fridage<span>r<span>.no<span></span></a></h1>
+        <h2 class="year">2019</h2>
+      </div>
     </header>
     <main>
-      <h1 class="">Full oversikt over norske helligdager, røde dager og inneklemte dager i 2019: </h1>
 
-      <select class="select-filter ui fluid dropdown" name="gender" id="select">
-        <option value="all">Vis opptil 2 inneklemte dager</option>
-        <option value=".inneklemt--dobbel">Vis doble inneklemte dager</option>
-        <option value=".inneklemt--enkel">Vis enkle inneklemte dager</option>
-        <option value=".yo">Skjul inneklemte dager</option>
-      </select>
+      <h1 class="intro__text">Full oversikt over norske helligdager, røde dager og inneklemte dager i 2019</h1>
 
-      <div class="card container">
-        <div class="card__section">
-            1. januar: Første nyttårsdag
-        </div>
-        <div class="card__section">
-          14. april: Palmesøndag
-        </div>
-        <div class="card__section">
-          18. april: Skjærtorsdag
-        </div>
-        <div class="card__section">
-          19. april: Langfredag
-        </div>
-        <div class="card__section">
-          21. april: Første påskedag
-        </div>
-        <div class="card__section">
-          22. april: Andre påskedag
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 29. april: Inneklemt mandag
+      <div class="main__grid">
+
+
+        <div class="main__grid__area--fridager">
+
+          <select class="select-filter ui fluid dropdown" name="gender" id="select">
+            <option value="all">Vis opptil to inneklemte dager</option>
+            <option value=".inneklemt--enkel">Vis kun enkle inneklemte dager</option>
+            <option value=".yo">Skjul inneklemte dager</option>
+          </select>
+
+          <div class="card container" id="fridager-card">
+            <div class="card__section">
+              1. januar: Første nyttårsdag
+            </div>
+            <div class="card__section">
+              14. april: Palmesøndag
+            </div>
+            <div class="card__section">
+              18. april: Skjærtorsdag
+            </div>
+            <div class="card__section">
+              19. april: Langfredag
+            </div>
+            <div class="card__section">
+              21. april: Første påskedag
+            </div>
+            <div class="card__section">
+              22. april: Andre påskedag
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                29. april: Inneklemt mandag
+              </div>
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                30. april: Inneklemt tirsdag
+              </div>
+            </div>
+            <div class="card__section">
+              1. mai: Arbeidernes dag
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                2. mai: Inneklemt torsdag
+              </div>
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                3. mai: Inneklemt fredag
+              </div>
+            </div>
+            <div class="card__section">
+              17. mai: Grunnlovsdag
+            </div>
+            <div class="card__section">
+              30. mai: Kristi himmelfartsdag
+            </div>
+            <div class="card__section mix inneklemt--enkel">
+              <div class="card__text--sandwiched">
+                31. mai: Inneklemt fredag
+              </div>
+            </div>
+            <div class="card__section">
+              9. juni: Første pinsedag
+            </div>
+            <div class="card__section">
+              10. juni: Andre pinsedag
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                23. desember: Inneklemt mandag
+              </div>
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                24. mai: Inneklemt tirsdag, julaften
+              </div>
+            </div>
+            <div class="card__section">
+              25. desember: Første juledag
+            </div>
+            <div class="card__section">
+              26. desember: Andre juledag
+            </div>
+            <div class="card__section mix inneklemt--enkel">
+              <div class="card__text--sandwiched">
+                27. desember: Inneklemt fredag
+              </div>
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                30. desember: Inneklemt mandag
+              </div>
+            </div>
+            <div class="card__section mix inneklemt--dobbel">
+              <div class="card__text--sandwiched">
+                31. desember: Inneklemt tirsdag
+              </div>
+            </div>
           </div>
+
         </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 30. april: Inneklemt tirsdag
+        <div class="main__grid__area--artikler">
+          <h3 class="section__title">
+            Artikler
+          </h3>
+
+          <div class="card container" id="fridager-article-card">
+            <div class="card__section__single card__section__single--plug">
+              <img src="assets/images/hendrik-morkel-463915-unsplash-crop-squoosh.jpg">
+              <div>
+                <div class="card__text--title card__text--title--big">
+                  Få mest ut av fridagene i påsken 2019
+                </div>
+                <div class="card__text">
+                  <p>Ved å fordele fridagene på en smart måte kan du få lange strekk med fri og ferie i 2019, til tross
+                    for at det ikke er det beste året med tanke på helligdager.</p>
+                  <a href="#">Artikkelen kommer snart</a>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-        <div class="card__section">
-          1. mai: Arbeidernes dag
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 2. mai: Inneklemt torsdag
+
+
+          <div class="card container" id="fridager-article-card">
+            <div class="card__section__single card__section__single--plug">
+              <img src="assets/images/1496672541024-squoosh.jpg">
+              <div>
+                <div class="card__text--title card__text--title--big">
+                  Slik makser du ferien og langhelger i 2019
+                </div>
+                <div class="card__text">
+                  <p>Ved å fordele fridagene på en smart måte kan du få lange strekk med fri og ferie i 2019, til tross
+                    for at det ikke er det beste året med tanke på helligdager.</p>
+                  <a href="#">Artikkelen kommer snart</a>
+                </div>
+              </div>
+            </div>
           </div>
+
         </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 3. mai: Inneklemt fredag
-          </div>
-        </div>
-        <div class="card__section">
-          17. mai: Grunnlovsdag
-        </div>
-        <div class="card__section">
-          30. mai: Kristi himmelfartsdag
-        </div>
-        <div class="card__section mix inneklemt--enkel">
-          <div class="card__text--sandwiched">
-            🥪 31. mai: Inneklemt fredag
-          </div>
-        </div>
-        <div class="card__section">
-          9. juni: Første pinsedag
-        </div>
-        <div class="card__section">
-          10. juni: Andre pinsedag
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 23. desember: Inneklemt mandag
-          </div>
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 24. mai: Inneklemt tirsdag, julaften
-          </div>
-        </div>
-        <div class="card__section">
-          25. desember: Første juledag
-        </div>
-        <div class="card__section">
-          26. desember: Andre juledag
-        </div>
-        <div class="card__section mix inneklemt--enkel">
-          <div class="card__text--sandwiched">
-            🥪 27. desember: Inneklemt fredag
-          </div>
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 30. desember: Inneklemt mandag
-          </div>
-        </div>
-        <div class="card__section mix inneklemt--dobbel">
-          <div class="card__text--sandwiched">
-            🥪 31. mai: Inneklemt tirsdag
-          </div>
-        </div>
-        
+
       </div>
 
     </main>
     <footer>
-      <p>Copyright © 2018 <a href="#" target="_blank">Kontakt</a></p>
+      <p>Fridager.no © 2018/2019 </p>
     </footer>
   </div>
-  <script src="./assets/scripts/bundle.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="./assets/scripts/bundle.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
   <script>
     $(document).ready(function () {
@@ -134,21 +183,22 @@
   </script>
   <script src="./assets/scripts/mixitup.min.js"></script>
   <script>
-      // In this example, we must bind 'change' event handlers to
-      // our <select> elements, then interact with the mixer via
-      // its .filter() and .sort() API methods.
-      var containerEl = document.querySelector('.container');
-      var selectFilter = document.querySelector('.select-filter');
-      var selectSort = document.querySelector('.select-sort');
-      var mixer = mixitup(containerEl);
-      selectFilter.addEventListener('change', function() {
-          var selector = selectFilter.value;
-          mixer.filter(selector);
-      });
-      selectSort.addEventListener('change', function() {
-          var order = selectSort.value;
-          mixer.sort(order);
-      });
+    // In this example, we must bind 'change' event handlers to
+    // our <select> elements, then interact with the mixer via
+    // its .filter() and .sort() API methods.
+    var containerEl = document.querySelector('.container');
+    var selectFilter = document.querySelector('.select-filter');
+    var selectSort = document.querySelector('.select-sort');
+
+    var mixer = mixitup(containerEl);
+    selectFilter.addEventListener('change', function () {
+      var selector = selectFilter.value;
+      mixer.filter(selector);
+    });
+    /* selectSort.addEventListener('change', function() {
+        var order = selectSort.value;
+        mixer.sort(order);
+    }); */
   </script>
 
 </body>

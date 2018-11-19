@@ -90,23 +90,10 @@
 /*!*****************************!*\
   !*** ./src/scripts/main.js ***!
   \*****************************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports) {
 
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./utils */ \"./src/scripts/utils.js\");\n\nconst baconEl = document.querySelector('.bacon');\nObject(_utils__WEBPACK_IMPORTED_MODULE_0__[\"GetBacon\"])().then(res => {\n  const markup = res.reduce((acc, val) => acc += `<p>${val}</p>`, '');\n  baconEl.innerHTML = markup;\n}).catch(err => baconEl.innerHTML = err);\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
-
-/***/ }),
-
-/***/ "./src/scripts/utils.js":
-/*!******************************!*\
-  !*** ./src/scripts/utils.js ***!
-  \******************************/
-/*! exports provided: GetBacon */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"GetBacon\", function() { return GetBacon; });\nconst GetBacon = () => {\n  const body = fetch('https://baconipsum.com/api/?type=meat-and-filler&paras=3').then(res => res.json());\n  return body;\n};\n\n//# sourceURL=webpack:///./src/scripts/utils.js?");
+eval("/* import { GetBacon } from './utils';\nconst baconEl = document.querySelector('.bacon');\nGetBacon()\n  .then(res => {\n    const markup = res.reduce((acc, val) => (acc += `<p>${val}</p>`), '');\n    baconEl.innerHTML = markup;\n  }).catch(err => (baconEl.innerHTML = err)); */\n\n//# sourceURL=webpack:///./src/scripts/main.js?");
 
 /***/ }),
 
